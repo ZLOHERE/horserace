@@ -211,6 +211,7 @@ def show_riders ():
 
     connection.close()
 print("Добро пожаловать в приложение клуба любителей  скачек «RamHorse»!")
+#probably we should change this message
 
 
 def menu():
