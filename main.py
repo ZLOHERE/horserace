@@ -18,6 +18,7 @@ def show_table(name_for_show):
     #Изменение 2
 
 def show_norm_table(option):
+    mas1=[]
     connection = sqlite3.connect('horse_racing.db')
     cursor = connection.cursor()
     if option == 1:
@@ -46,8 +47,11 @@ def show_norm_table(option):
             age_string = str(age_record).replace("(", "").replace(")", "").replace("'", "").replace(",", "")
 
             print(name_string, gen_string, age_string)
+            mas1.append(name_string + gen_string + age_string)
+        return(mas1)
 
     elif option == 2:
+        mas2=[]
         sql = "SELECT * FROM owner"
         cursor.execute(sql)
         records = cursor.fetchall()
@@ -77,8 +81,11 @@ def show_norm_table(option):
             age_string = str(age_record).replace("(", "").replace(")", "").replace("'", "").replace(",", "")
 
             print(name_string, address_string, age_string)
+            mas2.append(name_string + address_string + age_string)
+        return(mas2)
 
     elif option == 3:
+        mas[3]
         sql = "SELECT * FROM rider"
         cursor.execute(sql)
         records = cursor.fetchall()
@@ -113,6 +120,8 @@ def show_norm_table(option):
             rating_string = str(rating_record).replace("(", "").replace(")", "").replace("'", "").replace(",", "")
 
             print(name_string, address_string, age_string, rating_string)
+            mas3.append(name_string + address_string + age_string + rating_string)
+        return(mas3)
 
     elif option == 4:
         sql = "SELECT * FROM horses"
