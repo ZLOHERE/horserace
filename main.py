@@ -249,6 +249,7 @@ while True:
         print("Добавление информации о жокеях")
         enter_riders()
     elif choice == 6:
+        print("good luck")
         break;
     else:
         print("Недействительное значение.")
